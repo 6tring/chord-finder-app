@@ -1,0 +1,91 @@
+.background-image {
+  z-index: -1;
+  background-image: url(../public/bg-image.jpg);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 35px;
+  background: url(https://cdn.textures4photoshop.com/tex/thumbs/scratched-metal-texture-for-photoshop-thumb37.jpg)
+    no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  filter: brightness(75%);
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+  @media (min-width: 992px) {
+    font-size: 52px;
+  }
+}
+
+.title-text {
+  font-family: "Catamaran", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.red-text {
+  color: #C44235
+  ;
+  font-weight: 500;
+}
+
+.yellow-text {
+  color: #cd901e;
+  font-weight: 500;
+}
+
+.green-text {
+  color: #4b8d43;
+  font-weight: 500;
+}
+
+.blue-text {
+  color: #4c86bf;
+  font-weight: 500;
+}
+
+.chord-links {
+  color: #4c86bf;
+  text-decoration: none;
+}
+
+.chord-links:hover {
+  color: #5b9ddf;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+
+.chord-styles {
+  box-shadow: 5px 6px 10px 2px #c0c0c0;
+  height: 300px;
+  width: 600px;
+  background-color: #ffffff;
+  outline: 1px solid #000000;
+  // @media (min-width: 768px) {
+  //   height: 300px;
+  //   width: 600px;
+  // }
+}
+
+@import "~bootstrap/scss/bootstrap.scss";
