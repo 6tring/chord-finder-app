@@ -62,7 +62,7 @@ const keyDropdownValues = [
 ];
 
 const KeyDropdown = (props) => {
-  const { keyValue, setKeyValue } = useContext(KeyContext);
+  const { keyValue, dispatch } = useContext(KeyContext);
   return (
     <Dropdown>
       <Dropdown.Toggle style={keyButtonStyles}>{keyValue}</Dropdown.Toggle>
@@ -74,7 +74,7 @@ const KeyDropdown = (props) => {
               key={data.id}
               value={data.value}
               onClick={(event) => {
-                setKeyValue(event.target.value);
+                dispatch({ type: "KEY", keyValue: data.value })
               }}
             >
               {data.value}

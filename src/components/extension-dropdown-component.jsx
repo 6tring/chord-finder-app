@@ -54,7 +54,7 @@ const extensionDropdownValues = [
 ];
 
 const ExtensionDropdown = (props) => {
-  const { extensionValue, setExtensionValue } = useContext(ExtensionContext);
+  const { extensionValue, dispatch } = useContext(ExtensionContext);
   return (
     <Dropdown>
       <Dropdown.Toggle style={extensionButtonStyles}>
@@ -68,7 +68,7 @@ const ExtensionDropdown = (props) => {
               key={data.id}
               value={data.value}
               onClick={(event) => {
-                setExtensionValue(event.target.value);
+                dispatch({ type: "EXTENSION", extensionValue: data.value })
               }}
             >
               {data.value}

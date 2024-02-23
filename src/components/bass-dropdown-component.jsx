@@ -66,7 +66,7 @@ const bassDropdownValues = [
 ];
 
 const BassDropdown = (props) => {
-  const { bassValue, setBassValue } = useContext(BassContext);
+  const { bassValue, dispatch } = useContext(BassContext);
   return (
     <Dropdown>
       <Dropdown.Toggle style={bassButtonStyles}>
@@ -80,7 +80,7 @@ const BassDropdown = (props) => {
               key={data.id}
               value={data.value}
               onClick={(event) => {
-                setBassValue(event.target.value);
+                dispatch({ type: "BASS", bassValue: data.value })
               }}
             >
               {data.value}

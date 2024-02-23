@@ -82,7 +82,7 @@ const qualityDropdownValues = [
 ];
 
 const QualityDropdown = (props) => {
-  const { qualityValue, setQualityValue } = useContext(QualityContext);
+  const { qualityValue, dispatch } = useContext(QualityContext);
   return (
     <Dropdown>
       <Dropdown.Toggle style={qualityButtonStyles}>
@@ -96,7 +96,7 @@ const QualityDropdown = (props) => {
               key={data.id}
               value={data.value}
               onClick={(event) => {
-                setQualityValue(event.target.value);
+                dispatch({ type: "QUALITY", qualityValue: data.value })
               }}
             >
               {data.value}

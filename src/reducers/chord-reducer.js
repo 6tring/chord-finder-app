@@ -1,16 +1,16 @@
 const chordReducer = (state, action) => {
   switch (action.type) {
     case "KEY":
-      return
+      return state = action.keyValue;
     case "QUALITY":
-      return 
+      return state = action.qualityValue;
     case "EXTENSION":
-      return 
+      return state = action.extensionValue;
     case "BASS":
-      return 
-    case "CHORD":
-      return 
+      return state = action.bassValue;
     default:
       return state;
   }
 };
+
+export default chordReducer;
