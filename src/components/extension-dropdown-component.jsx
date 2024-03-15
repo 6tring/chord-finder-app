@@ -11,46 +11,16 @@ const extensionButtonStyles = {
 };
 
 const extensionDropdownValues = [
-  {
-    id: 1,
-    value: "No Extension",
-  },
-  {
-    id: 2,
-    value: "b9",
-  },
-  {
-    id: 3,
-    value: "9",
-  },
-  {
-    id: 4,
-    value: "#9",
-  },
-  {
-    id: 5,
-    value: "b11",
-  },
-  {
-    id: 6,
-    value: "11",
-  },
-  {
-    id: 7,
-    value: "#11",
-  },
-  {
-    id: 8,
-    value: "b13",
-  },
-  {
-    id: 9,
-    value: "13",
-  },
-  {
-    id: 10,
-    value: "#13",
-  },
+  "No Extension",
+  "b9",
+  "9",
+  "#9",
+  "b11",
+  "11",
+  "#11",
+  "b13",
+  "13",
+  "#13"
 ];
 
 const ExtensionDropdown = (props) => {
@@ -61,17 +31,17 @@ const ExtensionDropdown = (props) => {
         {extensionValue === "No Extension" ? "Extension" : extensionValue}
       </Dropdown.Toggle>
       <Dropdown.Menu className="scrollable-menu">
-        {extensionDropdownValues.map((data) => {
+        {extensionDropdownValues.map((value) => {
           return (
             <Dropdown.Item
               as="button"
-              key={data.id}
-              value={data.value}
+              key={value}
+              value={value}
               onClick={(event) => {
-                dispatch({ type: "EXTENSION", extensionValue: data.value })
+                dispatch({ type: "EXTENSION", extensionValue: value });
               }}
             >
-              {data.value}
+              {value}
             </Dropdown.Item>
           );
         })}

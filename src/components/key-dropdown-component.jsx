@@ -11,54 +11,18 @@ const keyButtonStyles = {
 };
 
 const keyDropdownValues = [
-  {
-    id: 1,
-    value: "C",
-  },
-  {
-    id: 2,
-    value: "Db",
-  },
-  {
-    id: 3,
-    value: "D",
-  },
-  {
-    id: 4,
-    value: "Eb",
-  },
-  {
-    id: 5,
-    value: "E",
-  },
-  {
-    id: 6,
-    value: "F",
-  },
-  {
-    id: 7,
-    value: "F#",
-  },
-  {
-    id: 8,
-    value: "G",
-  },
-  {
-    id: 9,
-    value: "Ab",
-  },
-  {
-    id: 10,
-    value: "A",
-  },
-  {
-    id: 11,
-    value: "Bb",
-  },
-  {
-    id: 12,
-    value: "B",
-  },
+  "C",
+  "Db",
+  "D",
+  "Eb",
+  "E",
+  "F",
+  "F#",
+  "G",
+  "Ab",
+  "A",
+  "Bb",
+  "B",
 ];
 
 const KeyDropdown = (props) => {
@@ -67,17 +31,17 @@ const KeyDropdown = (props) => {
     <Dropdown>
       <Dropdown.Toggle style={keyButtonStyles}>{keyValue}</Dropdown.Toggle>
       <Dropdown.Menu className="scrollable-menu">
-        {keyDropdownValues.map((data) => {
+        {keyDropdownValues.map((value) => {
           return (
             <Dropdown.Item
               as="button"
-              key={data.id}
-              value={data.value}
+              key={value}
+              value={value}
               onClick={(event) => {
-                dispatch({ type: "KEY", keyValue: data.value })
+                dispatch({ type: "KEY", keyValue: value });
               }}
             >
-              {data.value}
+              {value}
             </Dropdown.Item>
           );
         })}

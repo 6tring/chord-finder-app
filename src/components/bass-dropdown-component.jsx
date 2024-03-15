@@ -11,58 +11,19 @@ const bassButtonStyles = {
 };
 
 const bassDropdownValues = [
-  {
-    id: 1,
-    value: "No Bass",
-  },
-  {
-    id: 2,
-    value: "C",
-  },
-  {
-    id: 3,
-    value: "Db",
-  },
-  {
-    id: 4,
-    value: "D",
-  },
-  {
-    id: 5,
-    value: "Eb",
-  },
-  {
-    id: 6,
-    value: "E",
-  },
-  {
-    id: 7,
-    value: "F",
-  },
-  {
-    id: 8,
-    value: "F#",
-  },
-  {
-    id: 9,
-    value: "G",
-  },
-  {
-    id: 10,
-    value: "Ab",
-  },
-  {
-    id: 11,
-    value: "A",
-  },
-  {
-    id: 12,
-    value: "Bb",
-  },
-  {
-    id: 13,
-    value: "B",
-  },
+  "No Bass",
+  "C",
+  "Db",
+  "D",
+  "Eb",
+  "E",
+  "F",
+  "F#",
+  "G",
+  "Ab",
+  "A",
+  "Bb",
+  "B",
 ];
 
 const BassDropdown = (props) => {
@@ -73,17 +34,17 @@ const BassDropdown = (props) => {
         {bassValue === "No Bass" ? "Bass" : bassValue}
       </Dropdown.Toggle>
       <Dropdown.Menu className="scrollable-menu">
-        {bassDropdownValues.map((data) => {
+        {bassDropdownValues.map((value) => {
           return (
             <Dropdown.Item
               as="button"
-              key={data.id}
-              value={data.value}
+              key={value}
+              value={value}
               onClick={(event) => {
-                dispatch({ type: "BASS", bassValue: data.value })
+                dispatch({ type: "BASS", bassValue: value });
               }}
             >
-              {data.value}
+              {value}
             </Dropdown.Item>
           );
         })}
